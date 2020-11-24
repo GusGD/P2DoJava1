@@ -9,6 +9,20 @@ package br.umc.ppoo.model;
  *
  * @author guilherme
  */
-public class RelatorioPedidosCancelados {
-    
+public class RelatorioPedidosCancelados extends RelatorioTemplate {
+
+    @Override
+    public void montarCabecalho() {
+        //SOUT
+    }
+
+    @Override
+    public void montarConteudo() {
+        //SOUT
+    }
+
+    @Override
+    public void montarRodape() {
+        //SOUT
+    }
 }
