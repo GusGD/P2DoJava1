@@ -5,10 +5,18 @@
  */
 package br.umc.ppoo.model;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  *
  * @author guilherme
  */
 public class LeitorArquivo {
-    
+    public List<Pedido> ler(){
+        List<Pedido> listaPedido = new ArrayList<Pedido>();
+        
+        
+        return listaPedido;
+    }
 }

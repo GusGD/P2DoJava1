@@ -10,5 +10,7 @@ package br.umc.ppoo.model;
  * @author guilherme
  */
 public class GeradorDeRelatorio {
-    
+    public void gerar (Status status){
+        
+    }
 }

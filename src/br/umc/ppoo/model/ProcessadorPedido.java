@@ -10,5 +10,7 @@ package br.umc.ppoo.model;
  * @author guilherme
  */
 public class ProcessadorPedido {
-    
+    public void processar(){
+        
+    }
 }
