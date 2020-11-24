@@ -9,6 +9,11 @@ package br.umc.ppoo.model;
  *
  * @author guilherme
  */
-public class PedidoPendente {
+public class PedidoPendente implements PedidoCommand{
+
+    @Override
+    public void executar(Pedido pedido) {
+       
+    }
     
 }

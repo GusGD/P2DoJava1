@@ -9,6 +9,11 @@ package br.umc.ppoo.model;
  *
  * @author guilherme
  */
-public class PedidoConfirmado {
+public class PedidoConfirmado implements PedidoCommand{
+
+    @Override
+    public void executar(Pedido pedido) {
+       
+    }
     
 }

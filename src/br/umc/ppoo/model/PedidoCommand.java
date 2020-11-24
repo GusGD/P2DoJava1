@@ -9,6 +9,7 @@ package br.umc.ppoo.model;
  *
  * @author guilherme
  */
-public class PedidoCommand {
+public interface PedidoCommand {
+    public void executar(Pedido pedido);
     
 }
