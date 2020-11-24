@@ -10,5 +10,8 @@ package br.umc.ppoo.model;
  * @author guilherme
  */
 public class AppGeradorRelatorio {
-    
+    //main
+    public static void main(String[] args) {
+        
+    }
 }

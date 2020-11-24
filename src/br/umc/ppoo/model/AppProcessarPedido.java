@@ -11,4 +11,7 @@ package br.umc.ppoo.model;
  */
 public class AppProcessarPedido {
     //MAIN
+     public static void main(String[] args) {
+        
+    }
 }
