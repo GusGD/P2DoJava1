@@ -10,5 +10,11 @@ package br.umc.ppoo.model;
  * @author guilherme
  */
 public class PedidoFactory {
-    
+     public PedidoCommand create (Status status){
+        PedidoCommand pedidoCommand = new PedidoConfirmado();
+        
+        return pedidoCommand;
+        
+        //arrumar e criar um factory de verdade q funcione!
+    }
 }

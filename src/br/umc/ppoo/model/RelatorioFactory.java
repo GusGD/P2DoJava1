@@ -10,5 +10,11 @@ package br.umc.ppoo.model;
  * @author guilherme
  */
 public class RelatorioFactory {
-    
+    public RelatorioTemplate create (Status status){
+        RelatorioTemplate relatorioTemplate = new RelatorioPedidosConfirmados();
+        
+        return relatorioTemplate;
+        
+        //arrumar e criar um factory de verdade q funcione!
+    }
 }
