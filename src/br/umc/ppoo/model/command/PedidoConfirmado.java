@@ -3,13 +3,15 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package br.umc.ppoo.model;
+package br.umc.ppoo.model.command;
+
+import br.umc.ppoo.model.Pedido;
 
 /**
  *
  * @author guilherme
  */
-public class PedidoCancelado implements PedidoCommand{
+public class PedidoConfirmado implements PedidoCommand{
 
     @Override
     public void executar(Pedido pedido) {

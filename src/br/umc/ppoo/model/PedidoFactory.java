@@ -5,16 +5,33 @@
  */
 package br.umc.ppoo.model;
 
+import br.umc.ppoo.model.command.PedidoCancelado;
+import br.umc.ppoo.model.command.PedidoConfirmado;
+import br.umc.ppoo.model.command.PedidoCommand;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 /**
  *
  * @author guilherme
  */
 public class PedidoFactory {
      public PedidoCommand create (Status status){
-        PedidoCommand pedidoCommand = new PedidoConfirmado();
-        
-        return pedidoCommand;
-        
-        //arrumar e criar um factory de verdade q funcione!
+         
+         try {
+             String nomeClasse = "Pedido."+status;
+             Class classCommand = Class.forName(nomeClasse);
+             
+             PedidoCommand comando = (PedidoCommand) classCommand.newInstance();
+             
+             return comando;
+            
+             
+             //testar isso HAHAHAHA
+         } catch (Exception ex) {
+             Logger.getLogger(PedidoFactory.class.getName()).log(Level.SEVERE, null, ex);
+             return null;
+         } 
+          
     }
 }

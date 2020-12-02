@@ -3,36 +3,25 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package br.umc.ppoo.model;
-
-import java.util.ArrayList;
-import java.util.List;
+package br.umc.ppoo.model.template;
 
 /**
  *
  * @author guilherme
  */
-public abstract class RelatorioTemplate {
+public class RelatorioPedidosCancelados extends RelatorioTemplate {
 
-    List<Pedido> pedidos = new ArrayList<Pedido>();
-
-    public void gerar() {
-
-        montarCabecalho();
-        montarConteudo();
-        montarRodape();
-
-    }
-
+    @Override
     public void montarCabecalho() {
-
         //SOUT
     }
 
+    @Override
     public void montarConteudo() {
         //SOUT
     }
 
+    @Override
     public void montarRodape() {
         //SOUT
     }

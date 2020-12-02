@@ -5,6 +5,9 @@
  */
 package br.umc.ppoo.model;
 
+import br.umc.ppoo.model.template.RelatorioPedidosConfirmados;
+import br.umc.ppoo.model.template.RelatorioTemplate;
+
 /**
  *
  * @author guilherme

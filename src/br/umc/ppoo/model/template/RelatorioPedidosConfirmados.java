@@ -3,13 +3,13 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package br.umc.ppoo.model;
+package br.umc.ppoo.model.template;
 
 /**
  *
  * @author guilherme
  */
-public class RelatorioPedidosCancelados extends RelatorioTemplate {
+public class RelatorioPedidosConfirmados extends RelatorioTemplate {
 
     @Override
     public void montarCabecalho() {
