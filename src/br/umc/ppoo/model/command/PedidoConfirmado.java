@@ -15,7 +15,7 @@ public class PedidoConfirmado implements PedidoCommand{
 
     @Override
     public void executar(Pedido pedido) {
-       
+        System.out.println("Confirmaaaaaduuu");
     }
     
 }

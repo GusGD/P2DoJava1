@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 package br.umc.ppoo.model;
-
+import br.umc.ppoo.model.command.*;
 /**
  *
  * @author guilherme
@@ -13,7 +13,8 @@ public class AppProcessarPedido {
     //MAIN
      public static void main(String[] args) {
    PedidoFactory pedidoFactory = new PedidoFactory();
-  
-   pedidoFactory.create(Status.Pendente);
+  Pedido pedido = new Pedido();
+ PedidoCommand pedidoCommand = pedidoFactory.create(Status.Confirmado);
+   pedidoCommand.executar(pedido);
     }
 }

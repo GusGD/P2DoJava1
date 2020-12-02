@@ -21,13 +21,12 @@ public class PedidoFactory {
          try {
             
              String nomeClasse = "br.umc.ppoo.model.command.Pedido"+status.toString();
-            // Class classCommand = Class.forName(nomeClasse);
              PedidoCommand comando = (PedidoCommand) Class.forName(nomeClasse).newInstance();
              System.out.println(comando.toString());
              return comando;
             
              
-             //não queria fazer com if mas óssivelmente só vai rolar com ele ;-;
+             //FUNCIONOU YAAAAY
          } catch (Exception ex) {
              Logger.getLogger(PedidoFactory.class.getName()).log(Level.SEVERE, null, ex);
              return null;
