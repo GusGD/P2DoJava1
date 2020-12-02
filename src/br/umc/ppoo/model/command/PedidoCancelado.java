@@ -15,7 +15,7 @@ public class PedidoCancelado implements PedidoCommand{
 
     @Override
     public void executar(Pedido pedido) {
-       
+        System.out.println(pedido);
     }
     
 }

@@ -6,6 +6,7 @@
 package br.umc.ppoo.model.command;
 
 import br.umc.ppoo.model.Pedido;
+import br.umc.ppoo.model.Status;
 
 /**
  *
@@ -15,7 +16,7 @@ public class PedidoConfirmado implements PedidoCommand{
 
     @Override
     public void executar(Pedido pedido) {
-        System.out.println("Confirmaaaaaduuu");
+        System.out.println(pedido);
     }
     
 }

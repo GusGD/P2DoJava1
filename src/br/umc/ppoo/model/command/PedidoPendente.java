@@ -19,10 +19,7 @@ public class PedidoPendente implements PedidoCommand{
 
     @Override
     public void executar(Pedido pedido) {
-       
-    }
-
-    public PedidoPendente() {
+        System.out.println(pedido);
     }
     
 }
