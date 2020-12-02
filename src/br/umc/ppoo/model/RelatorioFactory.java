@@ -5,19 +5,27 @@
  */
 package br.umc.ppoo.model;
 
-import br.umc.ppoo.model.template.RelatorioPedidosConfirmados;
 import br.umc.ppoo.model.template.RelatorioTemplate;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
  * @author guilherme
  */
 public class RelatorioFactory {
-    public RelatorioTemplate create (Status status){
-        RelatorioTemplate relatorioTemplate = new RelatorioPedidosConfirmados();
-        
-        return relatorioTemplate;
-        
-        //arrumar e criar um factory de verdade q funcione!
+
+    public RelatorioTemplate create(Status status) {
+
+        try {
+
+            String nomeClasse = "br.umc.ppoo.model.template.RelatorioPedidos" + status.toString();
+            RelatorioTemplate relatorio = (RelatorioTemplate) Class.forName(nomeClasse).newInstance();
+            return relatorio;
+
+        } catch (Exception ex) {
+            Logger.getLogger(PedidoFactory.class.getName()).log(Level.SEVERE, null, ex);
+            return null;
+        }
     }
 }

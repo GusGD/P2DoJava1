@@ -5,24 +5,27 @@
  */
 package br.umc.ppoo.model.template;
 
+import br.umc.ppoo.model.Pedido;
+import java.util.ArrayList;
+
 /**
  *
  * @author guilherme
  */
-public class RelatorioPedidosConfirmados extends RelatorioTemplate {
+public class RelatorioPedidosPendente extends RelatorioTemplate {
 
     @Override
     public void montarCabecalho() {
-        //SOUT
+        super.montarCabecalho();
     }
 
     @Override
-    public void montarConteudo() {
-        //SOUT
+    public void montarConteudo(ArrayList<Pedido> listaPedidos) {
+        super.montarConteudo(listaPedidos);
     }
 
     @Override
     public void montarRodape() {
-        //SOUT
+        super.montarRodape();
     }
 }

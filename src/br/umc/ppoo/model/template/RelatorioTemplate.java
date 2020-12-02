@@ -6,6 +6,8 @@
 package br.umc.ppoo.model.template;
 
 import br.umc.ppoo.model.Pedido;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -15,26 +17,29 @@ import java.util.List;
  */
 public abstract class RelatorioTemplate {
 
-    List<Pedido> pedidos = new ArrayList<Pedido>();
+    List<Pedido> pedidos;
 
-    public void gerar() {
-
-        montarCabecalho();
-        montarConteudo();
-        montarRodape();
+    public void gerar(ArrayList<Pedido> listaPedidos) {
+        System.out.println("Relatório gerado com sucesso!");
+        this.montarCabecalho();
+        this.montarConteudo(listaPedidos);
+        this.montarRodape();
 
     }
 
     public void montarCabecalho() {
-
-        //SOUT
+        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss");
+        LocalDateTime now = LocalDateTime.now();
+        System.out.println(dtf.format(now));
     }
 
-    public void montarConteudo() {
-        //SOUT
+    public void montarConteudo(ArrayList<Pedido> listaPedidos) {
+        for (Pedido pedido : listaPedidos) {
+            System.out.println(pedido);
+        }
     }
 
     public void montarRodape() {
-        //SOUT
+        System.out.println("Rodapé com certeza \n");
     }
 }
