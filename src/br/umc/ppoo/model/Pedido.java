@@ -15,6 +15,14 @@ public class Pedido {
     private Double total;
     private Status status;
 
+    public Pedido(long id, String descricao, double total, Status status) {
+        this.id = id;
+        this.descricao = descricao;
+        this.total = total;
+        this.status = status;
+    }
+
+   
     public Long getId() {
         return id;
     }

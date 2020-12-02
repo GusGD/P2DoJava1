@@ -12,9 +12,7 @@ import br.umc.ppoo.model.command.*;
 public class AppProcessarPedido {
     //MAIN
      public static void main(String[] args) {
-   PedidoFactory pedidoFactory = new PedidoFactory();
-  Pedido pedido = new Pedido();
- PedidoCommand pedidoCommand = pedidoFactory.create(Status.Confirmado);
-   pedidoCommand.executar(pedido);
+     ProcessadorPedido processadorPedido = new ProcessadorPedido();
+     processadorPedido.processar();
     }
 }
