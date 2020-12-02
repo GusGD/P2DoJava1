@@ -5,9 +5,8 @@
  */
 package br.umc.ppoo.model;
 
-import br.umc.ppoo.model.command.PedidoCancelado;
-import br.umc.ppoo.model.command.PedidoConfirmado;
-import br.umc.ppoo.model.command.PedidoCommand;
+
+import br.umc.ppoo.model.command.*;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -19,15 +18,15 @@ public class PedidoFactory {
      public PedidoCommand create (Status status){
          
          try {
-             String nomeClasse = "Pedido."+status;
+             String mensagem = "Não funciona assim ;-;";
+             String nomeClasse = "Pedido"+status;
              Class classCommand = Class.forName(nomeClasse);
-             
              PedidoCommand comando = (PedidoCommand) classCommand.newInstance();
-             
+             System.out.println(comando.toString());
              return comando;
             
              
-             //testar isso HAHAHAHA
+             //não queria fazer com if mas óssivelmente só vai rolar com ele ;-;
          } catch (Exception ex) {
              Logger.getLogger(PedidoFactory.class.getName()).log(Level.SEVERE, null, ex);
              return null;

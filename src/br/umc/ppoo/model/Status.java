@@ -10,5 +10,5 @@ package br.umc.ppoo.model;
  * @author wolley
  */
 public enum Status {
-    PENDENTE, CONFIRMADO, CANCELADO
+    Pendente, Confirmado, Cancelado
 }

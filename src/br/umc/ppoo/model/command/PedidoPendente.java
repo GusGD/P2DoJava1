@@ -6,6 +6,10 @@
 package br.umc.ppoo.model.command;
 
 import br.umc.ppoo.model.Pedido;
+import br.umc.ppoo.model.Pedido;
+import br.umc.ppoo.model.Pedido;
+import br.umc.ppoo.model.command.PedidoCommand;
+import br.umc.ppoo.model.command.PedidoCommand;
 
 /**
  *
