@@ -13,7 +13,7 @@ public class AppProcessarPedido {
     //MAIN
      public static void main(String[] args) {
    PedidoFactory pedidoFactory = new PedidoFactory();
- 
+  
    pedidoFactory.create(Status.Pendente);
     }
 }

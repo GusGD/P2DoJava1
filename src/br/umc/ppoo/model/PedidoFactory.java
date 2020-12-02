@@ -7,6 +7,7 @@ package br.umc.ppoo.model;
 
 
 import br.umc.ppoo.model.command.*;
+import java.lang.reflect.Constructor;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -18,10 +19,10 @@ public class PedidoFactory {
      public PedidoCommand create (Status status){
          
          try {
-             String mensagem = "Não funciona assim ;-;";
-             String nomeClasse = "Pedido"+status;
-             Class classCommand = Class.forName(nomeClasse);
-             PedidoCommand comando = (PedidoCommand) classCommand.newInstance();
+            
+             String nomeClasse = "br.umc.ppoo.model.command.Pedido"+status.toString();
+            // Class classCommand = Class.forName(nomeClasse);
+             PedidoCommand comando = (PedidoCommand) Class.forName(nomeClasse).newInstance();
              System.out.println(comando.toString());
              return comando;
             

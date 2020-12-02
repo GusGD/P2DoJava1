@@ -21,5 +21,8 @@ public class PedidoPendente implements PedidoCommand{
     public void executar(Pedido pedido) {
        
     }
+
+    public PedidoPendente() {
+    }
     
 }
